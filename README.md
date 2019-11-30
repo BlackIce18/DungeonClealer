@@ -1,4 +1,5 @@
-# DungeonClealer 
+﻿# DungeonClealer 
+![Изображение интро](/DungeonClealer/Assets/Sprites/Menu/Intro/1.png)
 Создать:
 1.	Главное меню
 	-	Меню настроек (изменение размеров экрана, громкости звуков / музыки)
