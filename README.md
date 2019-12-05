@@ -37,3 +37,7 @@
 9.	Города
 10.	Сохранения
 11.	Новые персонажи
+
+# Полезные видео
+- Рандомная генерация подземелья
+https://www.youtube.com/watch?time_continue=234&v=QrD6rHbc4oo&feature=emb_logo
