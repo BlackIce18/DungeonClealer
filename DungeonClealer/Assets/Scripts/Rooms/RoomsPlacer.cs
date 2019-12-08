@@ -23,7 +23,6 @@ public class RoomsPlacer : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     private void PlaceOneRoom()
     {
         HashSet<Vector2Int> vacantPlaces = new HashSet<Vector2Int>();
@@ -45,10 +44,55 @@ public class RoomsPlacer : MonoBehaviour
         while(limit-- > 0) {
             Vector2Int position = vacantPlaces.ElementAt(Random.Range(0,vacantPlaces.Count));
             newRoom.RotateRandomly();
+            
+
+
             if(ConnectToSomething(newRoom,position)){
                 //position.x-5,position.y-5  - -5 это от spawnedRooms[5,5]
                 //*20 - размер комнаты по x - 1 стенку , аналогично и для *12
-                newRoom.transform.position = new Vector3((position.x-5)*20,(position.y-5)*12,0);
+                if (newRoom.transform.eulerAngles.z == 90) {
+                    int x = (position.x-5) * (newRoom.RoomSizeX);
+                    int y = (position.y-5) * (newRoom.RoomSizeY);
+                    int z = 0;
+                    if (y==0)
+                        y++;
+                    else if (y > 0 && x == 0)
+                        y += 5;
+                    else if (y < 0 && x == 0)
+                        y -= 5;
+                    newRoom.transform.position = new Vector3(x, y, z);
+                }
+
+                //if (newRoom.transform.eulerAngles.z >= 180 && newRoom.transform.eulerAngles.z <= 360) {
+                if (newRoom.transform.eulerAngles.z == 180) {
+                    /*int x = (position.x - 5) * (newRoom.RoomSizeX-1);
+                    int y = (position.y - 5) * (newRoom.RoomSizeY);
+                    int z = 0;
+                    newRoom.transform.position = new Vector3(x,y,z);
+                    Debug.Log(x+":"+y);*/
+                    int x = (position.x-5) * (newRoom.RoomSizeX);
+                    int y = (position.y-5) * (newRoom.RoomSizeY);
+                    int z = 0;
+                    newRoom.transform.position = new Vector3(x, y, z);
+                }
+
+                if (newRoom.transform.eulerAngles.z == 270)
+                {
+                    int x = (position.x-5) * (newRoom.RoomSizeX);
+                    int y = (position.y-5) * (newRoom.RoomSizeY);
+                    int z = 0;
+                    newRoom.transform.position = new Vector3(x, y, z);
+                }
+
+                if (newRoom.transform.eulerAngles.z == 0)
+                {
+                    /* newRoom.transform.position = new Vector3((position.x-5)*(newRoom.RoomSizeX-1),(position.y-5)*(newRoom.RoomSizeY-1),0);
+                     Debug.Log("false");*/
+                    int x = (position.x-5) * (newRoom.RoomSizeX);
+                    int y = (position.y-5) * (newRoom.RoomSizeY);
+                    int z = 0;
+                    newRoom.transform.position = new Vector3(x, y, z);
+                }
                 spawnedRooms[position.x,position.y] = newRoom;
                 return;
             }
@@ -64,10 +108,14 @@ public class RoomsPlacer : MonoBehaviour
         List<Vector2Int> neighbours = new List<Vector2Int>();
 
         // ? возвращает null если объект слева равен null
-        if(room.DoorU != null && p.y < maxY && spawnedRooms[p.x,p.y+1]?.DoorD != null) neighbours.Add(Vector2Int.up);
-        if(room.DoorD != null && p.y > 0 && spawnedRooms[p.x,p.y-1]?.DoorU != null) neighbours.Add(Vector2Int.down);
-        if(room.DoorR != null && p.x < maxX && spawnedRooms[p.x+1,p.y]?.DoorL != null) neighbours.Add(Vector2Int.right);
-        if(room.DoorL != null && p.x > 0 && spawnedRooms[p.x-1,p.y]?.DoorR != null) neighbours.Add(Vector2Int.left);
+        if (room.DoorU != null && p.y < maxY && spawnedRooms[p.x, p.y + 1]?.DoorD != null) 
+            neighbours.Add(Vector2Int.up);
+        if (room.DoorD != null && p.y > 0 && spawnedRooms[p.x, p.y - 1]?.DoorU != null) 
+            neighbours.Add(Vector2Int.down);
+        if (room.DoorR != null && p.x < maxX && spawnedRooms[p.x + 1, p.y]?.DoorL != null) 
+            neighbours.Add(Vector2Int.right);
+        if (room.DoorL != null && p.x > 0 && spawnedRooms[p.x - 1, p.y]?.DoorR != null) 
+            neighbours.Add(Vector2Int.left);
 
         if(neighbours.Count == 0) return false;
 

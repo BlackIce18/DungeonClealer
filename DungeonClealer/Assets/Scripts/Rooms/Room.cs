@@ -8,6 +8,9 @@ public class Room : MonoBehaviour
     public GameObject DoorR;
     public GameObject DoorD;
     public GameObject DoorL;
+
+    public int RoomSizeX;
+    public int RoomSizeY;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,12 @@ public class Room : MonoBehaviour
 
     public void RotateRandomly() {
         int count = Random.Range(0, 4);
+        int tmpSize;
         for (int i=0; i < count; i++) {
-            transform.Rotate(0,0,90);
-
+            transform.localRotation = Quaternion.Euler(0, 0, 90);
+            tmpSize = RoomSizeX;
+            RoomSizeX = RoomSizeY;
+            RoomSizeY = tmpSize;
             GameObject tmp = DoorL;
             DoorL = DoorD;
             DoorD = DoorR;
