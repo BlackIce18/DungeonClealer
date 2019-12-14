@@ -27,7 +27,8 @@ public class Room : MonoBehaviour
         int count = Random.Range(0, 4);
         int tmpSize;
         for (int i=0; i < count; i++) {
-            transform.localRotation = Quaternion.Euler(0, 0, 90);
+            //transform.localRotation = Quaternion.Euler(0, 0, 90);
+            transform.Rotate(0,0,90);
             tmpSize = RoomSizeX;
             RoomSizeX = RoomSizeY;
             RoomSizeY = tmpSize;
