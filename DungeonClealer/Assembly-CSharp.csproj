@@ -63,10 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Rooms\CurrentRoom.cs" />
     <Compile Include="Assets\Scripts\Rooms\Grounds\RandomlyBlockRotate.cs" />
     <Compile Include="Assets\Scripts\Rooms\Room.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomsPlacer.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomTransfer.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

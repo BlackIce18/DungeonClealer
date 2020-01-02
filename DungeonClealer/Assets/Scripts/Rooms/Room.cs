@@ -24,7 +24,7 @@ public class Room : MonoBehaviour
     }
 
     public void RotateRandomly() {
-        int count = Random.Range(0, 4);
+       /*int count = Random.Range(0, 4);
         int tmpSize;
         for (int i=0; i < count; i++) {
             //transform.localRotation = Quaternion.Euler(0, 0, 90);
@@ -33,10 +33,10 @@ public class Room : MonoBehaviour
             RoomSizeX = RoomSizeY;
             RoomSizeY = tmpSize;
             GameObject tmp = DoorL;
-            DoorL = DoorD;
-            DoorD = DoorR;
-            DoorR = DoorU;
-            DoorU = tmp;
-        }
+            DoorL = DoorU;
+            DoorU = DoorR;
+            DoorR = DoorD;
+            DoorD = tmp;
+        }*/
     }
 }

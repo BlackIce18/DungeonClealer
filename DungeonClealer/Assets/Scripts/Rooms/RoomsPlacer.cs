@@ -7,16 +7,19 @@ public class RoomsPlacer : MonoBehaviour
     public Room[] RoomPrefabs;
     public Room StartingRoom;
 
-    private Room[,] spawnedRooms;
+    public Room[,] spawnedRooms;
     // Start is called before the first frame update
     private IEnumerator Start()
     {
+
         spawnedRooms = new Room[11,11]; // Размер подземелья максимум 5 комнат наверх/вниз и влево/вправо
         spawnedRooms[5,5] = StartingRoom;
 
         for (int i = 0; i < 10; i++) {
-          PlaceOneRoom();
-          yield return new WaitForSecondsRealtime(0.5f);
+          
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            PlaceOneRoom();
         }
 
         //contectToSomething
@@ -93,7 +96,8 @@ public class RoomsPlacer : MonoBehaviour
                     int z = 0;
                     newRoom.transform.position = new Vector3(x, y, z);
                 }*/
-                newRoom.transform.position = new Vector3((position.x - 5) * (newRoom.RoomSizeX), (position.y - 5) * (newRoom.RoomSizeY), 0);
+                //newRoom.transform.position = new Vector3((position.x - 5) * (newRoom.RoomSizeX), (position.y - 5) * (newRoom.RoomSizeY), 0);
+                newRoom.transform.position = new Vector3((position.x-5) , (position.y-5), 0)*14;
                 spawnedRooms[position.x,position.y] = newRoom;
                 return;
             }
@@ -109,14 +113,10 @@ public class RoomsPlacer : MonoBehaviour
         List<Vector2Int> neighbours = new List<Vector2Int>();
 
         // ? возвращает null если объект слева равен null
-        if (room.DoorU != null && p.y < maxY && spawnedRooms[p.x, p.y + 1]?.DoorD != null) 
-            neighbours.Add(Vector2Int.up);
-        if (room.DoorD != null && p.y > 0 && spawnedRooms[p.x, p.y - 1]?.DoorU != null) 
-            neighbours.Add(Vector2Int.down);
-        if (room.DoorR != null && p.x < maxX && spawnedRooms[p.x + 1, p.y]?.DoorL != null) 
-            neighbours.Add(Vector2Int.right);
-        if (room.DoorL != null && p.x > 0 && spawnedRooms[p.x - 1, p.y]?.DoorR != null) 
-            neighbours.Add(Vector2Int.left);
+        if (room.DoorU != null && p.y < maxY && spawnedRooms[p.x, p.y + 1]?.DoorD != null) neighbours.Add(Vector2Int.up);
+        if (room.DoorD != null && p.y > 0 && spawnedRooms[p.x, p.y - 1]?.DoorU != null) neighbours.Add(Vector2Int.down);
+        if (room.DoorR != null && p.x < maxX && spawnedRooms[p.x + 1, p.y]?.DoorL != null) neighbours.Add(Vector2Int.right);
+        if (room.DoorL != null && p.x > 0 && spawnedRooms[p.x - 1, p.y]?.DoorR != null) neighbours.Add(Vector2Int.left);
 
         if(neighbours.Count == 0) return false;
 
