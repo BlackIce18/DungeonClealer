@@ -5101,7 +5101,7 @@ GameObject:
   - component: {fileID: 4682739575705105085}
   - component: {fileID: 3223709815284312037}
   m_Layer: 0
-  m_Name: Room Transfer (3)
+  m_Name: Room Transfer L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9166,7 +9166,7 @@ GameObject:
   - component: {fileID: 3141658807845552836}
   - component: {fileID: 6226192492417436830}
   m_Layer: 0
-  m_Name: Room Transfer
+  m_Name: Room Transfer U
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11914,7 +11914,7 @@ GameObject:
   - component: {fileID: 2516104937399611388}
   - component: {fileID: 5262602452743559794}
   m_Layer: 0
-  m_Name: Room Transfer (2)
+  m_Name: Room Transfer D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12312,7 +12312,7 @@ GameObject:
   - component: {fileID: 715282287918785311}
   - component: {fileID: 1226188427505221308}
   m_Layer: 0
-  m_Name: Room Transfer (1)
+  m_Name: Room Transfer R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15310,12 +15310,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a19c4e017bc8b488b5d16d6a6c1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorU: {fileID: 5744996394967780787}
-  DoorR: {fileID: 6515439899430479650}
-  DoorD: {fileID: 5725746128492820674}
-  DoorL: {fileID: 1865558163476798951}
-  RoomSizeX: 14
-  RoomSizeY: 14
+  doorU: {fileID: 5744996394967780787}
+  doorR: {fileID: 6515439899430479650}
+  doorD: {fileID: 5725746128492820674}
+  doorL: {fileID: 1865558163476798951}
+  roomTransferU: {fileID: 4135331568557495457}
+  roomTransferR: {fileID: 5499180003683003740}
+  roomTransferD: {fileID: 5193961347630757587}
+  roomTransferL: {fileID: 2117133963206877478}
+  roomSizeX: 14
+  roomSizeY: 14
 --- !u!1 &6377867637505352850
 GameObject:
   m_ObjectHideFlags: 0

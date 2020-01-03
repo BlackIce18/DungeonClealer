@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public GameObject DoorU;
-    public GameObject DoorR;
-    public GameObject DoorD;
-    public GameObject DoorL;
+    public GameObject doorU;
+    public GameObject doorR;
+    public GameObject doorD;
+    public GameObject doorL;
 
-    public int RoomSizeX;
-    public int RoomSizeY;
+    public GameObject roomTransferU;
+    public GameObject roomTransferR;
+    public GameObject roomTransferD;
+    public GameObject roomTransferL;
+
+    public int roomSizeX;
+    public int roomSizeY;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +28,52 @@ public class Room : MonoBehaviour
 
     }
 
+    public void RotateTransfer(RoomTransfer transfer) {
+        float temp;
+        temp = transfer.playerChange.x;
+        transfer.playerChange.x *= -1;
+        transfer.playerChange.y *= -1;
+        transfer.playerChange.x = transfer.playerChange.y;
+        transfer.playerChange.y = temp;
+
+        temp = transfer.x;
+        transfer.x *= -1;
+        transfer.y *= -1;
+        transfer.x = transfer.y;
+        transfer.y = (int)temp;
+    }
+
     public void RotateRandomly() {
-       /*int count = Random.Range(0, 4);
+        int count = Random.Range(0, 4);
         int tmpSize;
         for (int i=0; i < count; i++) {
             //transform.localRotation = Quaternion.Euler(0, 0, 90);
             transform.Rotate(0,0,90);
-            tmpSize = RoomSizeX;
-            RoomSizeX = RoomSizeY;
-            RoomSizeY = tmpSize;
-            GameObject tmp = DoorL;
-            DoorL = DoorU;
-            DoorU = DoorR;
-            DoorR = DoorD;
-            DoorD = tmp;
-        }*/
+            tmpSize = roomSizeX;
+            roomSizeX = roomSizeY;
+            roomSizeY = tmpSize;
+            GameObject tmp = doorL;
+            doorL = doorU;
+            doorU = doorR;
+            doorR = doorD;
+            doorD = tmp;
+
+            GameObject tmp1 = roomTransferL;
+            roomTransferL = roomTransferU;
+            roomTransferU = roomTransferR;
+            roomTransferR = roomTransferD;
+            roomTransferD = tmp1;
+
+            
+            if (roomTransferU)
+                RotateTransfer(roomTransferU.GetComponent<RoomTransfer>());
+            if (roomTransferR)
+                RotateTransfer(roomTransferR.GetComponent<RoomTransfer>());
+            if (roomTransferD)
+                RotateTransfer(roomTransferD.GetComponent<RoomTransfer>());
+            if (roomTransferL)
+                RotateTransfer(roomTransferL.GetComponent<RoomTransfer>());
+
+        }
     }
 }

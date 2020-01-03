@@ -29,20 +29,17 @@ public class RoomTransfer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("player")) {
-            collision.transform.position += playerChange;
 
-            curRoom.nmb1 += x;
-            curRoom.nmb2 += y;
-            curRoom.currentRoom = roomPlacer.spawnedRooms[curRoom.nmb1, curRoom.nmb2];
-            cam.target = curRoom.currentRoom.transform;
-            //cam.transform.position = new Vector3(14, 0, -10);
-            //camToRoom = curRoom.GetComponentInChildren<CameraPoint>();
-            curRoom.currentRoom.transform.position = new Vector3(curRoom.currentRoom.transform.position.x, curRoom.currentRoom.transform.position.y, 0);
-
-            //cam.transform.position = curRoom.currentRoom.transform.position;
-
-            //cam.transform.position = spawnedRooms[curRoom.nmb1, curRoom.nmb2].GetComponent<camToRoom>();
-            //cam.transform.position = ;
+            if (roomPlacer.spawnedRooms[curRoom.nmb1+x, curRoom.nmb2+y])
+            {
+                curRoom.nmb1 += x;
+                curRoom.nmb2 += y;
+                curRoom.currentRoom = roomPlacer.spawnedRooms[curRoom.nmb1, curRoom.nmb2];
+                collision.transform.position += playerChange;
+            
+                cam.target = curRoom.currentRoom.transform;
+                curRoom.currentRoom.transform.position = new Vector3(curRoom.currentRoom.transform.position.x, curRoom.currentRoom.transform.position.y, 0);
+            }
         }
     }
 }
