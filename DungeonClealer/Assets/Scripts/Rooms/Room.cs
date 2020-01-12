@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room : MonoBehaviour
+public class Room : MonoBehaviour, IRotateble
 {
     public GameObject doorU;
     public GameObject doorR;
@@ -42,38 +42,38 @@ public class Room : MonoBehaviour
         transfer.x = transfer.y;
         transfer.y = (int)temp;
     }
+    public void Rotate()
+    {
+        transform.Rotate(0, 0, 90);
+        int tmpSize;
+        tmpSize = roomSizeX;
+        roomSizeX = roomSizeY;
+        roomSizeY = tmpSize;
+        GameObject tmp = doorL;
+        doorL = doorU;
+        doorU = doorR;
+        doorR = doorD;
+        doorD = tmp;
 
+        GameObject tmp1 = roomTransferL;
+        roomTransferL = roomTransferU;
+        roomTransferU = roomTransferR;
+        roomTransferR = roomTransferD;
+        roomTransferD = tmp1;
+
+        if (roomTransferU)
+            RotateTransfer(roomTransferU.GetComponent<RoomTransfer>());
+        if (roomTransferR)
+            RotateTransfer(roomTransferR.GetComponent<RoomTransfer>());
+        if (roomTransferD)
+            RotateTransfer(roomTransferD.GetComponent<RoomTransfer>());
+        if (roomTransferL)
+            RotateTransfer(roomTransferL.GetComponent<RoomTransfer>());
+    }
     public void RotateRandomly() {
         int count = Random.Range(0, 4);
-        int tmpSize;
         for (int i=0; i < count; i++) {
-            //transform.localRotation = Quaternion.Euler(0, 0, 90);
-            transform.Rotate(0,0,90);
-            tmpSize = roomSizeX;
-            roomSizeX = roomSizeY;
-            roomSizeY = tmpSize;
-            GameObject tmp = doorL;
-            doorL = doorU;
-            doorU = doorR;
-            doorR = doorD;
-            doorD = tmp;
-
-            GameObject tmp1 = roomTransferL;
-            roomTransferL = roomTransferU;
-            roomTransferU = roomTransferR;
-            roomTransferR = roomTransferD;
-            roomTransferD = tmp1;
-
-            
-            if (roomTransferU)
-                RotateTransfer(roomTransferU.GetComponent<RoomTransfer>());
-            if (roomTransferR)
-                RotateTransfer(roomTransferR.GetComponent<RoomTransfer>());
-            if (roomTransferD)
-                RotateTransfer(roomTransferD.GetComponent<RoomTransfer>());
-            if (roomTransferL)
-                RotateTransfer(roomTransferL.GetComponent<RoomTransfer>());
-
+            Rotate();
         }
     }
 }

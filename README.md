@@ -45,3 +45,6 @@ https://www.youtube.com/watch?time_continue=234&v=QrD6rHbc4oo&feature=emb_logo
 https://habr.com/ru/post/309478/
 - Ошибка возникающая при пуше больших файлов (Команда для решения: git lfs migrate import --include="*.расширение большого файла")
 https://github.com/git-lfs/git-lfs/issues/1933
+- Анимация с помощью костей
+https://www.youtube.com/watch?v=HdqOfLZS8R0
+https://gamedevacademy.org/rig-a-2d-animated-character-in-unity/

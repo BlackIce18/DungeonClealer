@@ -17,7 +17,7 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         if (transform.position != target.position) {
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+            Vector3 targetPosition = new Vector3(target.position.x, (float)(target.position.y - 0.7), transform.position.z);
             transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
         }
     }

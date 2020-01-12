@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+
+public enum PlayerState {
+    walk,
+    attack,
+    interact
+}
+public class PlayerMovement : MonoBehaviour, IMovable
 {
-    public float speed;
+    private Player player;
+    //public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
+    private Vector3 changeAttack;
     private Animator animator;
+    public PlayerState currentState;
     // Start is called before the first frame update
     void Start()
     {
+        currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        player = GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,12 +32,38 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationAndMove();
+
+        changeAttack = Vector3.zero;
+        changeAttack.x = Input.GetAxisRaw("attack X");
+        changeAttack.y = Input.GetAxisRaw("attack Y");
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            changeAttack.y = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            changeAttack.x = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            changeAttack.y = -1;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            changeAttack.x = -1;
+        }
+
+        if (currentState != PlayerState.attack) {
+            UpdateAnimationAndAttack();
+        }
+        if (currentState == PlayerState.walk) { 
+            UpdateAnimationAndMove(); 
+        }
     }
+
 
     void UpdateAnimationAndMove() {
         if (change != Vector3.zero) {
-            MoveCharacter();
+            Move();
             animator.SetFloat("moveX",change.x);
             animator.SetFloat("moveY",change.y);
             animator.SetBool("moving",true);
@@ -36,7 +73,30 @@ public class PlayerMovement : MonoBehaviour
           }
     }
 
-    void MoveCharacter(){
-        myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
+    private IEnumerator AttackCo()
+    {
+        animator.SetBool("attacking", true);
+        //currentState = PlayerState.attack;
+        yield return null;
+        animator.SetBool("attacking", false);
+        //currentState = PlayerState.walk;
+    }
+    void UpdateAnimationAndAttack()
+    {
+        if (changeAttack != Vector3.zero)
+        {
+            //StartCoroutine(AttackCo());
+            animator.SetFloat("attackX", changeAttack.x);
+            animator.SetFloat("attackY", changeAttack.y);
+            animator.SetBool("attacking", true);
+        }
+        else
+        {
+            animator.SetBool("attacking", false);
+        }
+    }
+
+    public void Move() {
+        myRigidbody.MovePosition(transform.position + change * player.characteristics.speed * Time.deltaTime);
     }
 }
