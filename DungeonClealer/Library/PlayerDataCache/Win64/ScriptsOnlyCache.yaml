@@ -5,6 +5,8 @@ ScriptsOnlyBuild:
     - CameraMovement
     - Characteristics
     - CurrentRoom
+    - GameSettings
+    - MusicManager
     - Player
     - PlayerClasses
     - PlayerMovement
@@ -73,6 +75,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -91,6 +94,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Outline
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
@@ -169,15 +173,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15418}
     - Class: 114
-      Script: {instanceID: 15902}
+      Script: {instanceID: 15904}
     - Class: 114
-      Script: {instanceID: 16232}
+      Script: {instanceID: 16234}
     - Class: 114
-      Script: {instanceID: 16320}
+      Script: {instanceID: 16322}
     - Class: 114
-      Script: {instanceID: 16448}
+      Script: {instanceID: 16450}
     - Class: 114
-      Script: {instanceID: 16458}
+      Script: {instanceID: 16460}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -250,6 +254,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11158}
     - Class: 114
+      Script: {instanceID: 11480}
+    - Class: 114
       Script: {instanceID: 11738}
     - Class: 114
       Script: {instanceID: 11864}
@@ -300,31 +306,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15558}
     - Class: 114
-      Script: {instanceID: 15636}
+      Script: {instanceID: 15602}
     - Class: 114
-      Script: {instanceID: 15838}
+      Script: {instanceID: 15638}
     - Class: 114
-      Script: {instanceID: 15916}
+      Script: {instanceID: 15840}
     - Class: 114
-      Script: {instanceID: 15986}
+      Script: {instanceID: 15918}
     - Class: 114
-      Script: {instanceID: 16138}
+      Script: {instanceID: 15988}
     - Class: 114
-      Script: {instanceID: 16194}
+      Script: {instanceID: 16140}
     - Class: 114
-      Script: {instanceID: 16262}
+      Script: {instanceID: 16196}
     - Class: 114
-      Script: {instanceID: 16266}
+      Script: {instanceID: 16264}
     - Class: 114
-      Script: {instanceID: 16320}
+      Script: {instanceID: 16268}
     - Class: 114
-      Script: {instanceID: 16362}
+      Script: {instanceID: 16322}
     - Class: 114
-      Script: {instanceID: 16370}
+      Script: {instanceID: 16364}
     - Class: 114
-      Script: {instanceID: 16566}
+      Script: {instanceID: 16372}
     - Class: 114
-      Script: {instanceID: 16572}
+      Script: {instanceID: 16430}
+    - Class: 114
+      Script: {instanceID: 16568}
+    - Class: 114
+      Script: {instanceID: 16574}
+    - Class: 114
+      Script: {instanceID: 54948}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1722,6 +1734,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerUIntField
   - hash:
       serializedVersion: 2
+      Hash: ae349a3195f9f07ac6cb4f9916546427
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicManager
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -2050,6 +2068,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.Experimental.VFX.Utility
     className: VFXUISliderBinder
+  - hash:
+      serializedVersion: 2
+      Hash: 1b31e5e5859ef54228023137d9fc4134
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameSettings
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

@@ -6,15 +6,20 @@ public class SceneChanger : MonoBehaviour
 {
     private GameObject Settings;
     private GameObject MainMenu;
+
     private bool isShowedSettings;
     private bool isShowedMainMenu;
+
+    private GameObject GraphicsTab;
     // Start is called before the first frame update
     void Start()
     {
-        Settings = GameObject.Find("SettingsMenu");
+        Settings = GameObject.Find("Settings");
         MainMenu = GameObject.Find("MainMenu");
+
         isShowedSettings = !Settings.activeSelf;
-        isShowedMainMenu = MainMenu.activeSelf;
+        isShowedMainMenu =  MainMenu.activeSelf;
+        GraphicsTab = GameObject.Find("GraphicsTab");
     }
 
     // Update is called once per frame
@@ -22,22 +27,26 @@ public class SceneChanger : MonoBehaviour
     {
         
     }
-    public void changeSceneToIndx(int index) {
+    public void ChangeSceneToIndx(int index) {
         SceneManager.LoadScene(index);
     }
     public void CloseApp() {
         Application.Quit();
     }
-    private bool objToggler(GameObject g, bool a) {
+    private bool ObjToggler(GameObject g, bool a) {
         foreach (Transform child in g.transform)
         {
             child.gameObject.SetActive(!a);
-            objToggler(child.gameObject, a);
+            ObjToggler(child.gameObject, a);
         }
         return !a;
     }
     public void ShowSettings() {
-        isShowedMainMenu = objToggler(MainMenu, isShowedMainMenu);
-        isShowedSettings = objToggler(Settings, isShowedSettings);
+        isShowedMainMenu = ObjToggler(MainMenu, isShowedMainMenu);
+        isShowedSettings = ObjToggler(Settings, isShowedSettings);
+        foreach (Transform child in GraphicsTab.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 }

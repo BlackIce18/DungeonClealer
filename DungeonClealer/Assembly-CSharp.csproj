@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Behaviours\Player.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Characteristics.cs" />
+    <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMovable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotateble.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MusicManager.cs" />
