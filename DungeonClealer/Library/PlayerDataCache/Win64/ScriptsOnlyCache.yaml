@@ -35,9 +35,27 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.RenderPipelines.Core.Runtime.dll:
+    - UnityEngine.Rendering.Volume
+    - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.HighDefinition.Editor.dll:
     - UnityEditor.Experimental.Rendering.HDPipeline.HDProjectSettings
     Unity.RenderPipelines.HighDefinition.Runtime.dll:
+    - UnityEngine.Experimental.Rendering.AdditionalShadowData
+    - UnityEngine.Experimental.Rendering.HDPipeline.AmbientOcclusion
+    - UnityEngine.Experimental.Rendering.HDPipeline.Bloom
+    - UnityEngine.Experimental.Rendering.HDPipeline.DiffusionProfileSettings
+    - UnityEngine.Experimental.Rendering.HDPipeline.Exposure
+    - UnityEngine.Experimental.Rendering.HDPipeline.HDAdditionalCameraData
+    - UnityEngine.Experimental.Rendering.HDPipeline.HDAdditionalLightData
+    - UnityEngine.Experimental.Rendering.HDPipeline.HDRenderPipelineAsset
+    - UnityEngine.Experimental.Rendering.HDPipeline.HDRenderPipelineEditorResources
+    - UnityEngine.Experimental.Rendering.HDPipeline.HDShadowSettings
+    - UnityEngine.Experimental.Rendering.HDPipeline.ProceduralSky
+    - UnityEngine.Experimental.Rendering.HDPipeline.RenderPipelineResources
+    - UnityEngine.Experimental.Rendering.HDPipeline.Tonemapping
+    - UnityEngine.Experimental.Rendering.HDPipeline.VisualEnvironment
+    - UnityEngine.Experimental.Rendering.HDPipeline.VolumetricFog
     - UnityEngine.Experimental.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Experimental.Rendering.UI.DebugUIHandlerButton
     - UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
@@ -65,9 +83,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Experimental.Rendering.UI.UIFoldout
     Unity.RenderPipelines.Lightweight.Runtime.dll:
     - UnityEngine.Experimental.Rendering.LWRP.Light2D
-    - UnityEngine.Experimental.Rendering.LWRP.Renderer2DData
-    - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
-    - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_Dropdown
@@ -167,21 +182,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14846}
     - Class: 114
-      Script: {instanceID: 15012}
+      Script: {instanceID: 15014}
     - Class: 114
-      Script: {instanceID: 15316}
+      Script: {instanceID: 15318}
     - Class: 114
-      Script: {instanceID: 15418}
+      Script: {instanceID: 15420}
     - Class: 114
-      Script: {instanceID: 15904}
+      Script: {instanceID: 15906}
     - Class: 114
-      Script: {instanceID: 16234}
+      Script: {instanceID: 16236}
     - Class: 114
-      Script: {instanceID: 16322}
+      Script: {instanceID: 16324}
     - Class: 114
-      Script: {instanceID: 16450}
+      Script: {instanceID: 16330}
     - Class: 114
-      Script: {instanceID: 16460}
+      Script: {instanceID: 16452}
+    - Class: 114
+      Script: {instanceID: 16462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -298,45 +315,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14810}
     - Class: 114
-      Script: {instanceID: 14992}
+      Script: {instanceID: 14970}
     - Class: 114
-      Script: {instanceID: 15012}
+      Script: {instanceID: 14994}
     - Class: 114
-      Script: {instanceID: 15116}
+      Script: {instanceID: 15014}
     - Class: 114
-      Script: {instanceID: 15558}
+      Script: {instanceID: 15118}
     - Class: 114
-      Script: {instanceID: 15602}
+      Script: {instanceID: 15560}
     - Class: 114
-      Script: {instanceID: 15638}
+      Script: {instanceID: 15604}
     - Class: 114
-      Script: {instanceID: 15840}
+      Script: {instanceID: 15640}
     - Class: 114
-      Script: {instanceID: 15918}
+      Script: {instanceID: 15842}
     - Class: 114
-      Script: {instanceID: 15988}
+      Script: {instanceID: 15920}
     - Class: 114
-      Script: {instanceID: 16140}
+      Script: {instanceID: 15990}
     - Class: 114
-      Script: {instanceID: 16196}
+      Script: {instanceID: 16142}
     - Class: 114
-      Script: {instanceID: 16264}
+      Script: {instanceID: 16198}
     - Class: 114
-      Script: {instanceID: 16268}
+      Script: {instanceID: 16266}
     - Class: 114
-      Script: {instanceID: 16322}
+      Script: {instanceID: 16270}
     - Class: 114
-      Script: {instanceID: 16364}
+      Script: {instanceID: 16324}
     - Class: 114
-      Script: {instanceID: 16372}
+      Script: {instanceID: 16330}
     - Class: 114
-      Script: {instanceID: 16430}
+      Script: {instanceID: 16366}
     - Class: 114
-      Script: {instanceID: 16568}
+      Script: {instanceID: 16374}
     - Class: 114
-      Script: {instanceID: 16574}
+      Script: {instanceID: 16432}
     - Class: 114
-      Script: {instanceID: 54948}
+      Script: {instanceID: 16570}
+    - Class: 114
+      Script: {instanceID: 16576}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1566,6 +1585,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: d4cf48d2e06b2a9f911eec0e0e0151c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameSettings
+  - hash:
+      serializedVersion: 2
       Hash: c1718108101d254c6383c4849d6dd5f5
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -2068,12 +2093,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.Experimental.VFX.Utility
     className: VFXUISliderBinder
-  - hash:
-      serializedVersion: 2
-      Hash: 1b31e5e5859ef54228023137d9fc4134
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameSettings
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
