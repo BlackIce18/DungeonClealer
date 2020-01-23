@@ -64,13 +64,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Behaviours\Player.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\Game\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\Game\GameMenu.cs" />
+    <Compile Include="Assets\Scripts\Camera\MainMenu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Camera\MainMenu\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\Camera\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Characteristics.cs" />
     <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMovable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotateble.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\MusicManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerClasses.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Rooms\CurrentRoom.cs" />
@@ -184,9 +186,6 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -228,9 +227,6 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>

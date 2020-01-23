@@ -277,9 +277,6 @@
     <Reference Include="NSubstitute">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/PackageCache/com.unity.render-pipelines.high-definition@6.9.2-preview/Editor/Core/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="netstandard">
       <HintPath>E:/Unity 2019/2019/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>
