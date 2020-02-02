@@ -5,10 +5,25 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
-    public void ChangeSceneToIndx(int index) {
-        SceneManager.LoadScene(index);
+    public void ChangeSceneToIndx(int sceneIndex)
+    {
+        SceneManager.LoadSceneAsync(sceneIndex);
+    }
+    public void ChangeSceneToIndxWithLoad(int sceneIndex) {
+        StartCoroutine(LoadAsync(sceneIndex));
     }
     public void CloseApp() {
         Application.Quit();
+    }
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        SceneManager.LoadSceneAsync(3);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        
+        while (!operation.isDone) {
+
+            yield return null;
+        }
     }
 }
