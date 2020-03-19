@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Characteristics:MonoBehaviour
 {
     public int hp;
@@ -48,4 +48,24 @@ public class Characteristics:MonoBehaviour
     public float fireResistance;
     public float poisonResistance;
     public float earthResistance;
+
+    private Slider HP;
+    private Slider MP;
+    private Slider Armor;
+    void Start()
+    {
+        HP = GameObject.Find("HP").GetComponent<Slider>();
+        MP = GameObject.Find("MP").GetComponent<Slider>();
+        Armor = GameObject.Find("Armor").GetComponent<Slider>();
+
+        HP.maxValue = hp;
+        MP.maxValue = mp;
+        Armor.maxValue = armor;
+
+        HP.value = hp;
+        MP.value = mp;
+        Armor.value = armor;
+    }
+
+
 }

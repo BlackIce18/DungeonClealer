@@ -42,7 +42,12 @@ public class RoomsPlacer : MonoBehaviour
                 if(y < maxY && spawnedRooms[x,y+1] == null) vacantPlaces.Add(new Vector2Int(x,y+1));
             }
         }
+
         Room newRoom = Instantiate(RoomPrefabs[Random.Range(0, RoomPrefabs.Length)]);
+        for (int i = 0; i < newRoom.transform.childCount; i++) {
+            newRoom.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
         int limit = 150;
         while(limit-- > 0) {
             Vector2Int position = vacantPlaces.ElementAt(Random.Range(0,vacantPlaces.Count));

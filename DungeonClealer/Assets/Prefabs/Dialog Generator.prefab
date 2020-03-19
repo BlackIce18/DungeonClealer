@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9010072207739217789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9010072207739217787}
+  - component: {fileID: 9010072207739217786}
+  m_Layer: 0
+  m_Name: Dialog Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9010072207739217787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010072207739217789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 382.31412, y: 131.75601, z: -287.48636}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9010072207739217786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010072207739217789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be95f101350519241bed54517b77baf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Introduction
+  folder: Russian/Spirit
+  node:
+  - npcText: "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
+      \u0432 \u0438\u0433\u0440\u0443"
+    toNode: 1
+    playerAnswer:
+    - text: "\u041A \u0443\u0437\u043B\u0443 1"
+      toNode: 1
+      exit: 0
+    - text: "\u041A \u0443\u0437\u043B\u0443 2"
+      toNode: 1
+      exit: 0
+    - text: "\u041A \u0443\u0437\u043B\u0443 3"
+      toNode: 1
+      exit: 0
+    - text: "\u041A \u0443\u0437\u043B\u0443 4"
+      toNode: 1
+      exit: 0
+    - text: "\u041A \u0443\u0437\u043B\u0443 5"
+      toNode: 1
+      exit: 0
+    exit: 1
+  - npcText: "\u0414\u0430\u0432\u0430\u0439 \u044F \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0443
+      \u0442\u0435\u0431\u0435 \u043A\u0430\u043A \u0432\u0441\u0435 \u0442\u0443\u0442
+      \u0443\u0441\u0442\u0440\u043E\u0435\u043D\u043E"
+    toNode: 0
+    playerAnswer:
+    - text: "\u041F\u043E\u043A\u0430"
+      toNode: 0
+      exit: 1
+    exit: 0

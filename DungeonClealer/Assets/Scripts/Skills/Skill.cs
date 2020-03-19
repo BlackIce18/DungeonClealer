@@ -12,22 +12,22 @@ public class Skill : MonoBehaviour
     public int cost;
     public int coldown;
     public int durationOfUse;
+    public bool learned;
 
     public enum SkillType { singleTarget = 1, AOE = 2, nonTarget = 3 };
     public SkillType skilltype;
 
-    public Image skillIcon;
+    protected Animation animation;
     
 
     // Start is called before the first frame update
     void Start()
     {
         characteristics = GameObject.Find("Player Characteristics").GetComponent<Characteristics>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
+
+    /*public void UseSkill() {
+        animation.Play("New Animation");
+    }*/
 }

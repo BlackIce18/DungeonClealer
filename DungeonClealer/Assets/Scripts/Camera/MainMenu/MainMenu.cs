@@ -10,9 +10,8 @@ public class MainMenu : MonoBehaviour
     private bool isShowedSettings;
     private bool isShowedMainMenu;
 
-    private GameObject GraphicsTab;
+    private GameObject Tabs;
 
-    private GameSettings gameSettings;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +20,7 @@ public class MainMenu : MonoBehaviour
 
         isShowedSettings = Settings.transform.GetChild(0).gameObject.activeSelf;
         isShowedMainMenu = mainMenu.transform.GetChild(0).gameObject.activeSelf;
-        GraphicsTab = GameObject.Find("GraphicsTab");
-        gameSettings = GameObject.Find("GameSettings").GetComponent<GameSettings>();
+        Tabs = GameObject.Find("Tabs");
     }
 
     /*private bool ObjToggler(GameObject g, bool a) {
@@ -48,11 +46,12 @@ public class MainMenu : MonoBehaviour
         }
 
         //isShowedSettings = ObjToggler(Settings, isShowedSettings);
-
-        foreach (Transform child in GraphicsTab.transform)
+        foreach (Transform child in Tabs.transform)
         {
-            child.gameObject.SetActive(true);
+            child.gameObject.SetActive(isShowedSettings);
         }
-
+    }
+    public void CloseSettings() { 
+        
     }
 }

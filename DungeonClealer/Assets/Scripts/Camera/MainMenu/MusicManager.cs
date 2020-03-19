@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
     {
         for (int i = 0; i < musicList.Length; i++)
         {
-            Random.seed = (int)System.DateTime.Now.Ticks & 0x0000FFFF;
+            Random.InitState((int)System.DateTime.Now.Ticks & 0x0000FFFF);
             int temp = Random.Range(0, musicList.Length);
             AudioClip music = musicList[i];
             musicList[i] = musicList[temp];

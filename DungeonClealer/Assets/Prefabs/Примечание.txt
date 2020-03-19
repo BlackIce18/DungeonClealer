@@ -1,0 +1,1 @@
+Префаб Dialog Generator добавлять на сцену Game

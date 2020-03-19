@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -782,7 +782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &325527139
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,9 +1356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbcfc2c5b9112b4aa8d3bca3b2f76d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicVolume: {fileID: 0}
-  SliderMusicVolume: {fileID: 1704667845}
-  mute: 0
   tabsText:
   - {fileID: 1128878755}
   - {fileID: 269125631}
@@ -1367,10 +1364,12 @@ MonoBehaviour:
   - {fileID: 1182362073}
   - {fileID: 922029100}
   - {fileID: 325527138}
+  MusicVolume: {fileID: 0}
+  SliderMusicVolume: {fileID: 1704667845}
+  SliderFxVolume: {fileID: 1618736495}
+  mute: 0
   ScreenResolutions: {fileID: 944047016}
   ActiveWindowMode: {fileID: 623606588}
-  resolutionX: 0
-  resolutionY: 0
 --- !u!4 &379613724
 Transform:
   m_ObjectHideFlags: 0
@@ -1793,7 +1792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &623606588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2896,7 +2895,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 379613723}
-        m_MethodName: SaveAll
+        m_MethodName: SaveUserSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 365501603}
+        m_MethodName: ShowSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2971,7 +2981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &922029101
 Transform:
   m_ObjectHideFlags: 0
@@ -3010,7 +3020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &944047016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3848,7 +3858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1182362074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4175,7 +4185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1379706448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4981,7 +4991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1572522608
 RectTransform:
   m_ObjectHideFlags: 0

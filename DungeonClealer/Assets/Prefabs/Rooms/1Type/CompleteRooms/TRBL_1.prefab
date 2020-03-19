@@ -20096,7 +20096,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.562
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_Intensity: 0.5
-  m_LightVolumeOpacity: 0.059
+  m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000015e2637afa3679859f1cd2e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1

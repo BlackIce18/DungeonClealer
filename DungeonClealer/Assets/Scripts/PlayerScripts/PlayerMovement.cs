@@ -75,11 +75,9 @@ public class PlayerMovement : MonoBehaviour, IMovable
 
     private IEnumerator AttackCo()
     {
-        animator.SetBool("attacking", true);
         //currentState = PlayerState.attack;
         yield return null;
-        animator.SetBool("attacking", false);
-        //currentState = PlayerState.walk;
+        currentState = PlayerState.walk;
     }
     void UpdateAnimationAndAttack()
     {
