@@ -78,7 +78,9 @@
     <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMovable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotateble.cs" />
+    <Compile Include="Assets\Scripts\Objects\Pot.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerClasses.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Rooms\CurrentRoom.cs" />
     <Compile Include="Assets\Scripts\Rooms\Grounds\RandomlyBlockRotate.cs" />

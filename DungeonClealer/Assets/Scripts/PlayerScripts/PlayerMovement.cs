@@ -36,27 +36,28 @@ public class PlayerMovement : MonoBehaviour, IMovable
         changeAttack = Vector3.zero;
         changeAttack.x = Input.GetAxisRaw("attack X");
         changeAttack.y = Input.GetAxisRaw("attack Y");
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && currentState != PlayerState.attack) {
             changeAttack.y = 1;
+            StartCoroutine(AttackCo());
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && currentState != PlayerState.attack)
         {
             changeAttack.x = 1;
+            StartCoroutine(AttackCo());
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && currentState != PlayerState.attack)
         {
             changeAttack.y = -1;
+            StartCoroutine(AttackCo());
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && currentState != PlayerState.attack)
         {
             changeAttack.x = -1;
+            StartCoroutine(AttackCo());
         }
-
-        if (currentState != PlayerState.attack) {
-            UpdateAnimationAndAttack();
-        }
-        if (currentState == PlayerState.walk) { 
-            UpdateAnimationAndMove(); 
+        else if (currentState == PlayerState.walk)
+        {
+            UpdateAnimationAndMove();
         }
     }
 
@@ -75,26 +76,21 @@ public class PlayerMovement : MonoBehaviour, IMovable
 
     private IEnumerator AttackCo()
     {
-        //currentState = PlayerState.attack;
+        currentState = PlayerState.attack;
+        animator.SetBool("attacking", true);
+        animator.SetFloat("moveX", changeAttack.x);
+        animator.SetFloat("moveY", changeAttack.y);
+        animator.SetFloat("attackX", changeAttack.x);
+        animator.SetFloat("attackY", changeAttack.y);
+        yield return null;
+        animator.SetBool("attacking", false);
+        //yield return new WaitForSeconds(.33f);
         yield return null;
         currentState = PlayerState.walk;
     }
-    void UpdateAnimationAndAttack()
-    {
-        if (changeAttack != Vector3.zero)
-        {
-            //StartCoroutine(AttackCo());
-            animator.SetFloat("attackX", changeAttack.x);
-            animator.SetFloat("attackY", changeAttack.y);
-            animator.SetBool("attacking", true);
-        }
-        else
-        {
-            animator.SetBool("attacking", false);
-        }
-    }
 
     public void Move() {
+        change.Normalize(); // Убрать ускорение когда используешь перемещение (сразу 2 кнопки)
         myRigidbody.MovePosition(transform.position + change * player.characteristics.speed * Time.deltaTime);
     }
 }

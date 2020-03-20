@@ -115,20 +115,13 @@ public class DialogueManager : MonoBehaviour
 		clone.rect.SetParent(scrollRect.content);
 		clone.rect.localScale = Vector3.one;
 		clone.text.text = text;
-		clone.text.alignment = TMPro.TextAlignmentOptions.Left;
-		//clone.rect.sizeDelta = new Vector2(clone.rect.sizeDelta.x, clone.text.preferredHeight + offset);
-		clone.rect.sizeDelta = new Vector2(clone.rect.sizeDelta.x, 0+offset);
-		//clone.button.interactable = isActiveButton;
+		clone.rect.sizeDelta = new Vector2(clone.rect.sizeDelta.x, clone.text.preferredHeight + offset);
+		clone.button.interactable = isActiveButton;
 		height = clone.rect.sizeDelta.y;
+		clone.rect.anchoredPosition = new Vector2(0, -height / 2 - curY);
 
-		clone.rect.anchoredPosition = new Vector2(0, -clone.rect.localPosition.y / 2 - curY);
-
-		//clone.rect.anchoredPosition = new Vector2(0, -height / 2 - curY);
-
-		if (toNode > 0) 
-			SetNextDialogue(clone.button, toNode);
-		if (exit) 
-			SetExitDialogue(clone.button);
+		if (toNode > 0) SetNextDialogue(clone.button, toNode);
+		if (exit) SetExitDialogue(clone.button);
 
 		buttons.Add(clone.rect);
 	}

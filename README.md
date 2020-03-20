@@ -48,3 +48,7 @@ https://github.com/git-lfs/git-lfs/issues/1933
 - Анимация с помощью костей
 https://www.youtube.com/watch?v=HdqOfLZS8R0
 https://gamedevacademy.org/rig-a-2d-animated-character-in-unity/
+- Редактор звуков кнопок
+https://nubick.ru/button-sounds-editor-for-unity-post/
+- Настройка кнопок геймпада
+https://thealexluk.wordpress.com/2014/10/31/multiplayer-unity3d-3-setting-up-controls/
