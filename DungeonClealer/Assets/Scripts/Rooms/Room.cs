@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Room : MonoBehaviour, IRotateble
 {
+    public int x;
+    public int y;
     public GameObject doorU;
     public GameObject doorR;
     public GameObject doorD;

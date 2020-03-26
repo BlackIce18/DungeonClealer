@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour
 {
+    public bool isSmashed;
     private Animator anim;
     [Header("Звук разбития:")]
     public AudioClip smahingSound;
@@ -22,8 +23,13 @@ public class Pot : MonoBehaviour
     }
     public void Smash()
     {
-        anim.SetBool("smash", true);
-        audio.PlayOneShot(smahingSound);
+        if (isSmashed == false)
+        {
+            anim.SetBool("smash", true);
+
+            audio.PlayOneShot(smahingSound);
+            isSmashed = true;
+        }
         //StartCoroutine(breakCo());
     }
 

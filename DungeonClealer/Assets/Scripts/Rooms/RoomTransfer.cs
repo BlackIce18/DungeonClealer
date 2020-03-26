@@ -20,12 +20,6 @@ public class RoomTransfer : MonoBehaviour
         roomPlacer = GameObject.Find("RoomsPlacer").GetComponent<RoomsPlacer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("player")) {
@@ -41,9 +35,11 @@ public class RoomTransfer : MonoBehaviour
                 curRoom.currentRoom = roomPlacer.spawnedRooms[curRoom.nmb1, curRoom.nmb2];
                 collision.transform.position += playerChange;
             
-                cam.target = curRoom.currentRoom.transform;
+
 
                 curRoom.currentRoom.transform.position = new Vector3(curRoom.currentRoom.transform.position.x, curRoom.currentRoom.transform.position.y, 0);
+
+                cam.target = curRoom.currentRoom.transform;
             }
         }
     }

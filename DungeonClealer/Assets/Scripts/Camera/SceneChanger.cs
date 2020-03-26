@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
+    private void Start()
+    {
+        if (GameObject.Find("TransitionImage"))
+        {
+            GameObject.Find("TransitionImage").GetComponent<Animation>().Play();
+            StartCoroutine(ShowDungeonName());
+
+        }
+    }
+    IEnumerator ShowDungeonName() {
+        yield return new WaitForSeconds(1.25f);
+        GameObject.Find("DungeonName").GetComponent<Animation>().Play();
+    }
     public void ChangeSceneToIndx(int sceneIndex)
     {
         SceneManager.LoadSceneAsync(sceneIndex);

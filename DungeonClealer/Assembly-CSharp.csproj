@@ -78,6 +78,13 @@
     <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMovable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotateble.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryCells.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryComponent.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryDrop.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryEditor.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryEnum.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryIcon.cs" />
     <Compile Include="Assets\Scripts\Objects\Pot.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerClasses.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHit.cs" />

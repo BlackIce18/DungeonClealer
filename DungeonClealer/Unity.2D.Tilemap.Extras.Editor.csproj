@@ -82,11 +82,11 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

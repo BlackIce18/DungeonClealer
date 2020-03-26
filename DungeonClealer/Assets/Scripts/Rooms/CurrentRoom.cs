@@ -8,13 +8,4 @@ public class CurrentRoom : MonoBehaviour
     public int nmb1;
     public int nmb2;
     public Room currentRoom;
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
