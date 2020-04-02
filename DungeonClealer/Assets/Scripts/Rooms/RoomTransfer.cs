@@ -23,7 +23,6 @@ public class RoomTransfer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("player")) {
-
             if (roomPlacer.spawnedRooms[curRoom.nmb1+x, curRoom.nmb2+y])
             {
                 for (int i = 0; i < roomPlacer.spawnedRooms[curRoom.nmb1 + x, curRoom.nmb2 + y].transform.childCount; i++) {

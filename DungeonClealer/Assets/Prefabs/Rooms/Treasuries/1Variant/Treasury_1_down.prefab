@@ -23927,13 +23927,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a19c4e017bc8b488b5d16d6a6c1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
   doorU: {fileID: 0}
   doorR: {fileID: 0}
-  doorD: {fileID: 0}
+  doorD: {fileID: 5196154397066890824}
   doorL: {fileID: 0}
   roomTransferU: {fileID: 0}
   roomTransferR: {fileID: 0}
-  roomTransferD: {fileID: 0}
+  roomTransferD: {fileID: 3374775094837946434}
   roomTransferL: {fileID: 0}
   roomSizeX: 14
   roomSizeY: 14

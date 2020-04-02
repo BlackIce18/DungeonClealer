@@ -76,14 +76,14 @@
     <Compile Include="E:\Unity\дополнительные плюшки\2d-extras-master package\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
     <Compile Include="E:\Unity\дополнительные плюшки\2d-extras-master package\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
     <None Include="E:\Unity\дополнительные плюшки\2d-extras-master package\Runtime\Brushes\TintedTilemap.shader" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:/Unity/unity projects/КурсовойСноваВойна/DungeonClealer/DungeonClealer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>E:/Unity 2019/2019/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

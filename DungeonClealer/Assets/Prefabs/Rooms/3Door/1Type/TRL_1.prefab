@@ -7632,7 +7632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
-  y: 1
+  y: -1
   playerChange: {x: 0, y: 4, z: 0}
 --- !u!1 &3498409794308823152
 GameObject:
@@ -22708,6 +22708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a19c4e017bc8b488b5d16d6a6c1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
   doorU: {fileID: 7862374477096102716}
   doorR: {fileID: 8704875575630135725}
   doorD: {fileID: 0}

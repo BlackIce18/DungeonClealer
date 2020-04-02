@@ -18,16 +18,18 @@ public class Room : MonoBehaviour, IRotateble
 
     public int roomSizeX;
     public int roomSizeY;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    public List<GameObject> CheckDoors(Room room) {
+        List<GameObject> doors = new List<GameObject>();
+        if (room.doorU)
+            doors.Add(room.doorU);
+        if (room.doorR)
+            doors.Add(room.doorR);
+        if (room.doorD)
+            doors.Add(room.doorD);
+        if (room.doorL)
+            doors.Add(room.doorL);
+        return doors;
     }
 
     public void RotateTransfer(RoomTransfer transfer) {

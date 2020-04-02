@@ -2690,6 +2690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a19c4e017bc8b488b5d16d6a6c1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
   doorU: {fileID: 1480240937170500106}
   doorR: {fileID: 0}
   doorD: {fileID: 1460682807408611195}
@@ -21316,7 +21318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
-  y: -1
+  y: 1
   playerChange: {x: 0, y: -4, z: 0}
 --- !u!1 &7420504138714715639
 GameObject:
@@ -23243,7 +23245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
-  y: 1
+  y: -1
   playerChange: {x: 0, y: 4, z: 0}
 --- !u!1 &8607698833564912738
 GameObject:

@@ -52,3 +52,5 @@ https://gamedevacademy.org/rig-a-2d-animated-character-in-unity/
 https://nubick.ru/button-sounds-editor-for-unity-post/
 - Настройка кнопок геймпада
 https://thealexluk.wordpress.com/2014/10/31/multiplayer-unity3d-3-setting-up-controls/
+- Взлом и защита игр 
+https://habr.com/ru/post/266345/

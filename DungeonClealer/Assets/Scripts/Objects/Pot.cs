@@ -26,9 +26,14 @@ public class Pot : MonoBehaviour
         if (isSmashed == false)
         {
             anim.SetBool("smash", true);
-
+            //this.GetComponent<BoxCollider2D>().isTrigger = true;
             audio.PlayOneShot(smahingSound);
             isSmashed = true;
+            //int coinChance = Random.Range(0, 100);
+            //if (coinChance <= 50) {
+                // Instantiate(coin, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
+            //    coin.transform.SetParent(transform.parent);
+            //}
         }
         //StartCoroutine(breakCo());
     }
