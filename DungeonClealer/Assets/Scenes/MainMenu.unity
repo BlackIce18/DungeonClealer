@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6000,7 +6000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dungeon Clealer
+  m_text: Dungeon Cleaner
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5396627de9170542a88e4687aab4ab5, type: 2}
   m_sharedMaterial: {fileID: 4053027323217896180, guid: d5396627de9170542a88e4687aab4ab5,

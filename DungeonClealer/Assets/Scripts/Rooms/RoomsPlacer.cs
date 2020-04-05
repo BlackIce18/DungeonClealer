@@ -69,7 +69,7 @@ public class RoomsPlacer : MonoBehaviour
         spawnedRooms[vacantplace.x, vacantplace.y] = room;
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
         isSpawnedTeasuries = false;
         isSpawnedBoosRoom = false;
@@ -102,7 +102,7 @@ public class RoomsPlacer : MonoBehaviour
                 break;
             }
             PlaceOneRoom();
-            yield return new WaitForSecondsRealtime(0.5f);
+            //yield return new WaitForSecondsRealtime(0.5f);
         }
         int vacantplacescount = vacantPlaces.Count;
         while (vacantplacescount-- > 0)

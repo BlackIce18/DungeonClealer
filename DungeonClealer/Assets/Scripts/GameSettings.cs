@@ -27,19 +27,13 @@ public class GameSettings : MonoBehaviour
         (tabsText[0]).GetComponent<TextMeshProUGUI>().color = ActiveColor;
         GetResolutions();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void GetUserSettings() {
         mute = PlayerPrefs.GetInt("MuteSounds")==1;
         Camera.main.GetComponent<AudioSource>().mute = mute;
         SliderMusicVolume.value = PlayerPrefs.GetFloat("MusicVolume");
         SliderFxVolume.value = PlayerPrefs.GetFloat("FxVolume");
         ScreenResolutions.value = PlayerPrefs.GetInt("ScreenResolution");
-        ActiveWindowMode.enabled = PlayerPrefs.GetInt("ActiveWindowMode")==1;
+        ActiveWindowMode.enabled = PlayerPrefs.GetInt("ActiveWindowMode")==0;
     }
     public void SaveUserSettings() {
         PlayerPrefs.SetInt("MuteSounds",mute ? 1 : 0);

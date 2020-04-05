@@ -1396,6 +1396,7 @@ GameObject:
   - component: {fileID: 109832839}
   - component: {fileID: 109832838}
   - component: {fileID: 109832837}
+  - component: {fileID: 109832840}
   m_Layer: 5
   m_Name: ToolsMenu
   m_TagString: Untagged
@@ -1514,6 +1515,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109832835}
   m_CullTransparentMesh: 0
+--- !u!114 &109832840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109832835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSource: {fileID: 519420035}
+  ClickSound: {fileID: 8300000, guid: fc8035cff88cad041b438a6c7516277c, type: 3}
 --- !u!1 &111866884
 GameObject:
   m_ObjectHideFlags: 0

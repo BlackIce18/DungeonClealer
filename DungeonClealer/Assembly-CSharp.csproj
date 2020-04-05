@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Objects\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Objects\ObjectSpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Objects\Pot.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\ChooseHeroAttributes\ChooseHeroAttributes.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerClasses.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />

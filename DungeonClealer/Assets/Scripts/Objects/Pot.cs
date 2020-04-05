@@ -16,11 +16,6 @@ public class Pot : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Smash()
     {
         if (isSmashed == false)
