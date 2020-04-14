@@ -13,7 +13,6 @@ ScriptsOnlyBuild:
     - CurrentRoom
     - DialogueManager
     - DragHandler
-    - Equipment
     - GameMenu
     - GameSettings
     - Inventory
@@ -82,8 +81,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -306,8 +307,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 13540}
-    - Class: 114
       Script: {instanceID: 13550}
     - Class: 114
       Script: {instanceID: 13654}
@@ -342,6 +341,10 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}

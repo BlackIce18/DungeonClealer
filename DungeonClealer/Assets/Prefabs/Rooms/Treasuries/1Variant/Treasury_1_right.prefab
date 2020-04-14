@@ -23765,7 +23765,7 @@ GameObject:
   - component: {fileID: 8515112903079462218}
   - component: {fileID: 2647340918520110794}
   m_Layer: 9
-  m_Name: Treasury_1
+  m_Name: Treasury_1_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23818,6 +23818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a19c4e017bc8b488b5d16d6a6c1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  y: 0
   doorU: {fileID: 0}
   doorR: {fileID: 8413641983983482386}
   doorD: {fileID: 0}

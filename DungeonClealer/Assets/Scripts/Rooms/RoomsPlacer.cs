@@ -95,9 +95,9 @@ public class RoomsPlacer : MonoBehaviour
             
             if ((vacantPlaces.Count == 2 && i == randomRoomNumber - 2) || (i == randomRoomNumber - 1 && vacantPlaces.Count >= 2) && (isSpawnedTeasuries == false) && (isSpawnedBoosRoom == false))
             {
-                Debug.Log("Добавляем сокровищницу");
+               // Debug.Log("Добавляем сокровищницу");
                 isSpawnedTeasuries = SpawnOneDoorRoom(Treasuries);
-                Debug.Log("Босс комната");
+               // Debug.Log("Босс комната");
                 isSpawnedBoosRoom = SpawnOneDoorRoom(bossRooms);
                 break;
             }
@@ -160,11 +160,11 @@ public class RoomsPlacer : MonoBehaviour
     private void PlaceOneRoom()
     {
         getVacantPlaces();
-        string str = "";
+        /*string str = "";
         for (int i = 0; i < vacantPlaces.Count; i++){
             str += vacantPlaces.ToList()[i] + " ";
         }
-        Debug.Log(str);
+        Debug.Log(str);*/
         // Эту строчку можно заменить на выбор комнаты с учётом её вероятности, вроде как в ChunksPlacer.GetRandomChunk()
         Room newRoom = Instantiate(GenerateRandomRoom());
         int limit = 100;

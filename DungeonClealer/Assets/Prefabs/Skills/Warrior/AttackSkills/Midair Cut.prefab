@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 1405543201388531724}
   - component: {fileID: 7083124515375499963}
   - component: {fileID: 6148180391023982365}
+  - component: {fileID: 6516798284019250320}
   - component: {fileID: 947628080907222787}
   - component: {fileID: 8546446846509163143}
   m_Layer: 5
@@ -274,7 +275,53 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7083124515375499963}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6516798284019250320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7146757273400218505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f671347804ff84aa1ada45fc91f16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characteristics: {fileID: 0}
+  skillName: "\u0420\u0430\u0437\u0440\u0435\u0437 \u0432\u043E\u0437\u0434\u0443\u0445\u0430"
+  description: 
+  level: 0
+  cost: 50
+  coldown: 0
+  durationOfUse: 0
+  learned: 0
+  skilltype: 0
+  range: 0
+  skillDamage: 0
+  magicDamage: 0
 --- !u!225 &947628080907222787
 CanvasGroup:
   m_ObjectHideFlags: 0
